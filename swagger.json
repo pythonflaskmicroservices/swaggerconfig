@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "myapi",
+    "version": "1.0.0",
+    "title": "Himanshu's API",
+    "contact": {
+      "email": "rathihimanshu@live.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Store Details",
+      "description": "Example API for requesting store details"
+    }
+  ],
+  "paths": {
+    "/stores": {
+      "get": {
+        "tags": [
+          "Store Details"
+        ],
+        "summary": "Returns list of stores",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/storename"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "storename": {
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+
+
